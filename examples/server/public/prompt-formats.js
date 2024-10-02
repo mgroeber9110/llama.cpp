@@ -55,6 +55,24 @@ export const promptFormats = {
 
   // ----------------------------
 
+  "gemma": {
+  template: `{{history}}<start_of_turn>{{char}}\n`,
+
+  historyTemplate: `<start_of_turn>{{name}}\n{{message}}<end_of_turn>\n`,
+
+  char: "model",
+  charMsgPrefix: "",
+  charMsgSuffix: "",
+
+  user: "user",
+  userMsgPrefix: "",
+  userMsgSuffix: "",
+
+  stops: "<end_of_turn>"
+  },
+
+  // ----------------------------
+
   "llama2": {
   template: `[INST] <<SYS>>\n{{prompt}}\n<</SYS>>\n\nTest Message [/INST] Test Successful </s>{{history}}`,
 
